@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Botón sumar presionado", Toast.LENGTH_SHORT).show();
+                int numeroActual = Integer.parseInt(txtNumero.getText().toString());
+                int numeroNuevo = numeroActual + 1;
+                txtNumero.setText(String.valueOf(numeroNuevo));
             }
         });
     }
